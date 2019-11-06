@@ -1,0 +1,59 @@
+body {
+    background: #FFBA00;
+    padding: 20px;
+    text-align: center;
+    font-family: Verdana;
+}
+
+main {
+    background: white;
+    border-radius: 5px;
+    margin: auto;
+    width: 95%;
+    padding: 20px 0;
+    
+}
+img {
+	display: block;
+    max-width: 50%;
+
+    margin: auto;
+}
+
+#comments {
+    margin-top: 50px;
+}
+.comment, form {
+    border: 0.5px solid gray;
+    border-radius: 5px;
+    max-width: 50%;
+    margin: 1rem auto;
+}
+
+input, textarea {
+    border: 0.5px solid gray;
+    border-radius: 5px;
+    padding: 1rem;   
+    width: 70%; 
+}
+
+.formSection {
+    margin: 1rem auto;
+}
+label {
+    display: block;
+}
+button {
+    color: white;
+    background:  #FFBA00;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 5px;
+    font-size: 120%;
+}
+h1{
+    margin: 3rem;
+}
+p {
+    padding: 10px;
+}

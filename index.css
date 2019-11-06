@@ -1,0 +1,52 @@
+body {
+    background: #FFBA00;
+    padding: 20px;
+    text-align: center;
+    font-family: Verdana;
+}
+
+main {
+    background: white;
+    border-radius: 5px;
+    margin: auto;
+    width: 95%;
+    padding: 20px 0;
+    
+}
+img {
+	display: block;
+    max-width: 100%;
+    max-height: 500px;
+}
+
+.artObject {
+  max-width: 80%;
+  max-height: 20rem;
+  margin: auto;
+}
+
+
+
+#gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+
+h1, p {
+    padding: 10px;
+}
+h2, a {
+    margin: 10px;
+    vertical-align: center;
+    margin: auto 10px;
+    padding: 20px;  
+}
+
+
+
+  
+
+

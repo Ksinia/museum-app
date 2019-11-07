@@ -44,7 +44,9 @@ h2, a {
     margin: auto 10px;
     padding: 20px;  
 }
-
+.shadow {
+    filter: brightness(40%);
+}
 
 
   

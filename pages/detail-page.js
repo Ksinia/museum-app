@@ -18,4 +18,10 @@ function submitComment() {
     comment.appendChild(h3);
     comment.appendChild(p);
     console.log(comment);
+    //finding the section for comments and put comment there
+    const commentSection = document.getElementById("comments");
+    commentSection.appendChild(comment);
+    // clear inout fields
+    inputFieldMsg.value = null;
+    inputFieldName.value = null;
 }

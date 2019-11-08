@@ -343,6 +343,10 @@ function displayPainting(painting) {
     img.src = imageURL;
     img.alt = imageName;
     link.href = "./pages/detail-page.html";
+    link.onclick = function () {
+        sessionStorage.setItem('imageURL', imageURL);
+        sessionStorage.setItem('imageName', imageName);
+    }
     document.getElementById("gallery").appendChild(link);
 }
 
@@ -362,3 +366,4 @@ function notMeetRequirements(painting) {
     }
     return false;
 }
+

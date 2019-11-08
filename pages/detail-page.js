@@ -46,3 +46,16 @@ function doesNotPassAllValidations(name, msg) {
     }
     return false;
 }
+
+//replace the picture and title with the correct ones
+display();
+
+function display() {
+    const title = document.createElement('h1')
+    title.innerHTML = sessionStorage.getItem("imageName");
+    const img = document.createElement('img');
+    img.src = sessionStorage.getItem("imageURL");
+    img.alt = sessionStorage.getItem("imageName");
+    document.getElementById('content').appendChild(title);
+    document.getElementById('content').appendChild(img);
+}

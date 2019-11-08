@@ -331,6 +331,9 @@ const paintingsRijksmuseum = data.artObjects;
 paintingsRijksmuseum.forEach((painting) => displayPainting(painting));
 
 function displayPainting(painting) {
+    if (notMeetRequirements(painting)) {
+        return null
+    }
     const imageURL = painting.webImage.url;
     const imageName = painting.longTitle;
     const link = document.createElement('a');
@@ -343,3 +346,19 @@ function displayPainting(painting) {
     document.getElementById("gallery").appendChild(link);
 }
 
+//filter the paintings according to the requirements:
+// It should only display paintings with a width bigger than 1500.
+// It should not display any paintings created by Honthorst.
+// It should only display paintings which are created before 1800.
+function notMeetRequirements(painting) {
+    if (painting.webImage.width <= 1500) {
+        return true;
+    }
+    if (painting.longTitle.search('Honthorst') != -1) {  // search returns -1 if there is no match and returns the position of the match if there is match
+        return true;
+    }
+    if (painting.longTitle.slice(-4) >= 1800) {
+        return true;
+    }
+    return false;
+}

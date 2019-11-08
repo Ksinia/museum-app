@@ -46,3 +46,12 @@ function doesNotPassAllValidations(name, msg) {
     }
     return false;
 }
+
+//replace the picture and title with the correct ones
+console.log(document.getElementById('painting'))
+document.getElementById('painting').src = sessionStorage.getItem("imageURL");
+document.getElementById('painting').alt = sessionStorage.getItem("imageName");
+document.getElementById('painting-title').innerHTML = sessionStorage.getItem("imageName")
+
+console.log(sessionStorage.getItem("imageURL"));
+

@@ -48,10 +48,14 @@ function doesNotPassAllValidations(name, msg) {
 }
 
 //replace the picture and title with the correct ones
-console.log(document.getElementById('painting'))
-document.getElementById('painting').src = sessionStorage.getItem("imageURL");
-document.getElementById('painting').alt = sessionStorage.getItem("imageName");
-document.getElementById('painting-title').innerHTML = sessionStorage.getItem("imageName")
+display();
 
-console.log(sessionStorage.getItem("imageURL"));
-
+function display() {
+    const title = document.createElement('h1')
+    title.innerHTML = sessionStorage.getItem("imageName");
+    const img = document.createElement('img');
+    img.src = sessionStorage.getItem("imageURL");
+    img.alt = sessionStorage.getItem("imageName");
+    document.getElementById('content').appendChild(title);
+    document.getElementById('content').appendChild(img);
+}

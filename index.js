@@ -366,7 +366,4 @@ function notMeetRequirements(painting) {
     }
     return false;
 }
-sessionStorage.setItem("alldata", JSON.stringify(data));
-// const myData = sessionStorage.getItem("alldata");
-// console.log(myData)
-// sessionStorage.setItem('clickedPainting', '');
+

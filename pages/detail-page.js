@@ -51,11 +51,20 @@ function doesNotPassAllValidations(name, msg) {
 display();
 
 function display() {
-    const title = document.createElement('h1')
-    title.innerHTML = sessionStorage.getItem("imageName");
+    // getting data
+    const imageName = sessionStorage.getItem("imageName")
+    const imageURL = sessionStorage.getItem("imageURL")
+    // creating elements
+    const paintingName = document.createElement('h1')
+    paintingName.innerHTML = imageName;
     const img = document.createElement('img');
-    img.src = sessionStorage.getItem("imageURL");
-    img.alt = sessionStorage.getItem("imageName");
-    document.getElementById('content').appendChild(title);
+    img.src = imageURL;
+    img.alt = imageName;
+    const pageTitle = document.createElement('title');
+    pageTitle.innerHTML = sessionStorage.getItem("imageName")
+    // adding elements to the page
+    document.getElementById('content').appendChild(paintingName);
     document.getElementById('content').appendChild(img);
+    document.head.appendChild(pageTitle);
+
 }
